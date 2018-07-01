@@ -1,9 +1,10 @@
 package com.ltf.studyspringboot.controller;
 
+import com.ltf.studyspringboot.context.MyApplicationEvent;
 import com.ltf.studyspringboot.dao.UserDao;
 import com.ltf.studyspringboot.domin.User;
-import com.ltf.studyspringboot.exception.ValidateException;
 import com.ltf.studyspringboot.repository.UserRepository;
+import org.springframework.context.ApplicationContext;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class UserController {
 
     private UserDao userDao;
 
-    public UserController(UserRepository userRepository, UserDao userDao) {
+    public UserController(UserRepository userRepository, ApplicationContext context, UserDao userDao) {
         this.userRepository = userRepository;
         this.userDao = userDao;
     }
@@ -27,6 +28,7 @@ public class UserController {
     public List<User> getAllUser(){
         //throw new ValidateException("你没有权限操作！","200");
         //return userRepository.getAllUser();
+        int i = 1/0;
         return userDao.getAllUser();
     }
 

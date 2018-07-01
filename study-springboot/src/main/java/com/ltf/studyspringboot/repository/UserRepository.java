@@ -1,13 +1,14 @@
 package com.ltf.studyspringboot.repository;
 
 import com.ltf.studyspringboot.domin.User;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 

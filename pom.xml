@@ -28,6 +28,7 @@
 
   <modules>
     <module>study-springboot</module>
+    <module>study-springcloud</module>
   </modules>
 
   <dependencies>
